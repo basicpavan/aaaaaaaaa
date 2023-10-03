@@ -1,0 +1,39 @@
+*{
+  padding: 0px;
+  margin: 0%;
+}
+
+.daddy{
+  display: flex;
+  flex-direction: row;
+}
+.left{
+  width: 100%;
+  ;
+}
+.right{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.exibir{
+  width: 56vh;
+  height: 45vh;
+  margin: 7px;
+  border: dashed black 2px ;
+}
+input{
+  height: 4vh;
+}
+button{
+  height: 4vh;
+  width: 40%;
+}
+.upload{
+  display: flex;
+  flex-direction: column;
+}
+.butao{
+  margin: 7px;
+}
