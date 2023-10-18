@@ -3,6 +3,7 @@ var preview = document.querySelector(".exibir")
 var galeria = document.querySelector(".galery")
 var button = document.querySelector(".btn")
 var galeriaArray = []
+var previewVar = ""
 
 url.addEventListener("keydown", (e) => {
     console.log(e)
@@ -10,6 +11,7 @@ url.addEventListener("keydown", (e) => {
         const img = document.createElement("img")
         img.src = url.value
         img.className = "image"
+        previewVar = url.value
         preview.innerHTML = ""
         preview.appendChild(img)
     }
@@ -18,8 +20,15 @@ url.addEventListener("keydown", (e) => {
 
 button.addEventListener("click", () => {
     console.log("CLicou")
+    galeria.innerHTML = ""
     galeriaArray.push({
         id: 1,
-        url: url.value
+        url: previewVar
     })
+    galeriaArray.forEach(e => {
+        const img = document.createElement("img")
+        img.src = e.url
+        img.className = "png"
+        galeria.appendChild (img)
+    });
 })
